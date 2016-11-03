@@ -1,0 +1,51 @@
+<md-toolbar md-scroll-shrink>
+	<div class="md-toolbar-tools">
+
+		<p><strong>Waterloo Classifieds</strong></p>
+
+		<md-button ng-click="vm.openSidebar()">
+			<md-icon md-font-set="material-icons">queue</md-icon>
+			New Classified
+		</md-button>
+
+		<md-button ng-click="vm.showFilters = true">
+			<md-icon md-font-set="material-icons">search</md-icon>
+			Filters
+		</md-button>
+
+	</div>
+</md-toolbar>
+
+<div class="filters" layout="row" layout-align="center center" ng-show="vm.showFilters">
+	<md-input-container>
+		<label>Enter Search term</label>
+		<input type="text" ng-model="classifiedsFilter" />
+	</md-input-container>
+
+	<md-input-container>
+		<label>Category</label>
+		<md-select ng-model="category">
+			<md-option ng-repeat="category in vm.categories" value="{{ category }}">
+				{{ category }}
+			</md-option>
+		</md-select>
+	</md-input-container>
+
+	<md-input-container>
+		<md-button class="md-warn" ng-click="classifiedsFilter = ''; category = ''">
+			Clear
+		</md-button>
+	</md-input-container>
+
+</div>
+
+<ui-view></ui-view>
+
+<md-content>
+	<classified-card
+		classifieds="vm.classifieds",
+		classifieds-filter="classifiedsFilter",
+		category="category"
+		class="md-padding" layout="row" layout-wrap>
+	</classified-card>
+</md-content>
