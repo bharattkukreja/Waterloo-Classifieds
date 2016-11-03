@@ -1,5 +1,9 @@
 # Waterloo-Classifieds
 ##A classified ad posting website exclusively for University of Waterloo students made with Angular JS, and Firebase API.
+
+I have been really frustrated by the free and for sale facebook groups which are there to buy and sell used stuff. The information loss in those groups is severe, and since there are no ad filters, it is a pain to keep scrolling to find an item you need.
+Since students in the university are moving in and every term, having a proper sale system is very crucial. Through Waterloo-Classified, I hope to overcome the shortcomings of the already prevalent system out there for buying and selling stuff, and provide a centralized platform and thus make this task much easier and efficient.
+
 Students can log in with their facebook/gmail accounts, or create a new one and post ads of the stuff the want to sell. Admins can review, edit and delete the existing ads.
 Any new classified added is tagged, and the search filter relies on those tags.
 
